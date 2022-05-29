@@ -1,0 +1,35 @@
+[Logarithmic]
+* It only works in ordered arrays 
+* Define the start and end variables
+* Find the middle of the array by dividing the sum of start+end by 2
+* If the value is in the middle position return it
+* If the value is bigger than the middle one run the function again using the middle + 1 as a start
+* If the value is smaller than the middle one run the function again using the middle - 1 as a end
+* If start is bigger than end it wasn't found
+
+[Dynamic Programming]
+* Notice any overlapping subproblems
+* Decide what is the trivially smallest possible input
+* Decite to use either Memoization or Tabulation
+* Try to draw the strategy
+
+[Memoization]
+1 - Make it work
+  * Do some simple examples by hand
+  * Visualize the problem as a tree
+  * Implement the tree using recursion
+  * Test the implementation
+
+2 - Make it efficient
+  * Add the memo object
+  * Add the check if the argument is in the memo if so return it
+  * The memo only records the value that changes on each iteration
+  * Store the value in the memo before returning it
+
+[Tabulation]
+* Visualize the problem as a table
+* Size the table based on the inputs
+* Initialize the table with default values
+* Seed the trivial answer into the table
+* Iterate through the table
+* Fill further positions based on the current possition

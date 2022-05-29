@@ -91,3 +91,25 @@ time.Stop();
 Console.WriteLine(time.Elapsed.ToString());
 time.Reset();
 
+
+// Dyanamic Programing
+// Fibonacci using tabulation
+uint Fib(int n)
+{
+  if(n==0) return 0;
+  if(n==1) return 1;
+  var array = new uint[n+1];
+  array[0] = 0;
+  array[1] = 1;
+  for(int i = 2; i< array.Length; i++)
+  {
+      array[i] = array[i-1] + array[i-2];
+  }
+
+  return array[n];
+}
+
+Console.WriteLine(Fib(1));
+Console.WriteLine(Fib(10));
+Console.WriteLine(Fib(30));
+Console.WriteLine(Fib(50));
